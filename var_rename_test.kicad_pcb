@@ -81,17 +81,16 @@
 	)
 	(net 0 "")
 	(net 1 "unconnected-(R1-Pad1)")
-	(net 2 "unconnected-(R1-Pad2)")
-	(footprint "Resistor_SMD:R_0805_2012Metric"
+	(footprint "var_rename:TestPoint_Bridge_Pitch2.0mm_Drill0.7mm"
 		(layer "F.Cu")
 		(uuid "bf401f0d-4d60-43d9-b32b-81ac60e90a02")
 		(at 136.2475 82.804)
-		(descr "Resistor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
-		(tags "resistor")
+		(descr "wire loop as test point, pitch 2.0mm, hole diameter 0.7mm, wire diameter 0.5mm")
+		(tags "test point wire loop")
 		(property "Reference" "R1"
-			(at 0 -1.65 0)
+			(at 1.1 1.7 0)
 			(layer "F.SilkS")
-			(uuid "76168254-327f-47e9-a57f-38bfd9ef1288")
+			(uuid "9802c286-3398-4ecb-9a5f-30fc042f5df0")
 			(effects
 				(font
 					(size 1 1)
@@ -100,9 +99,9 @@
 			)
 		)
 		(property "Value" "R"
-			(at 0 1.65 0)
+			(at 1 -1.7 0)
 			(layer "F.Fab")
-			(uuid "8abc2c7b-eec1-4d37-ae3b-1a09618da920")
+			(uuid "2c4fcce3-f5f7-4817-a42a-9a8d9d9e0399")
 			(effects
 				(font
 					(size 1 1)
@@ -110,12 +109,12 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+		(property "Footprint" "var_rename:TestPoint_Bridge_Pitch2.0mm_Drill0.7mm"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "b752af6f-eb73-43a2-82b6-36fc6c2f420a")
+			(uuid "ef20d780-90fa-4da0-bb2d-f069b717f074")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -128,7 +127,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "a4be9eb5-ea2e-4029-a9a2-f8923ff279b1")
+			(uuid "7dcf5677-4ac7-4154-a645-eef209760e15")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -141,7 +140,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "2284c0cf-a586-4646-869b-a647addd2f04")
+			(uuid "384b672c-7282-4788-94cc-4928a79c65f8")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -162,7 +161,7 @@
 				)
 			)
 		)
-		(property "left:Footprint" "Resistor_SMD:R_0805_2012Metric"
+		(property "left:Footprint" "var_rename:D_0805_2012Metric"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -175,7 +174,7 @@
 				)
 			)
 		)
-		(property "right:Footprint" "TestPoint:TestPoint_Bridge_Pitch2.0mm_Drill0.7mm"
+		(property "right:Footprint" "var_rename:TestPoint_Bridge_Pitch2.0mm_Drill0.7mm"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -192,137 +191,129 @@
 		(path "/eddb10dc-3adc-42e7-aa04-ec08127295fd")
 		(sheetname "Root")
 		(sheetfile "var_rename_test.kicad_sch")
-		(attr smd)
+		(attr through_hole)
 		(fp_line
-			(start -0.227064 -0.735)
-			(end 0.227064 -0.735)
+			(start -0.9 -0.9)
+			(end -0.9 0.9)
 			(stroke
 				(width 0.12)
 				(type solid)
 			)
 			(layer "F.SilkS")
-			(uuid "f05ece98-4fda-474a-a3ed-314dbf1e2042")
+			(uuid "0e2c1ded-8535-4a3c-8588-2b4fe3e5d554")
 		)
 		(fp_line
-			(start -0.227064 0.735)
-			(end 0.227064 0.735)
+			(start -0.9 0.9)
+			(end 2.9 0.9)
 			(stroke
 				(width 0.12)
 				(type solid)
 			)
 			(layer "F.SilkS")
-			(uuid "fbe329cb-2b1c-4368-832c-2ee2b5c003d3")
+			(uuid "d80cd0a8-aca6-4230-8361-60b916d119d8")
 		)
 		(fp_line
-			(start -1.68 -0.95)
-			(end 1.68 -0.95)
+			(start 2.9 -0.9)
+			(end -0.9 -0.9)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "a064ef4a-82a5-4fd1-bbd8-79ad0a9852ff")
+		)
+		(fp_line
+			(start 2.9 0.9)
+			(end 2.9 -0.9)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "2fd3c724-5515-4105-adc5-bb907471bdd2")
+		)
+		(fp_line
+			(start -1.2 1.2)
+			(end -1.2 -1.2)
 			(stroke
 				(width 0.05)
 				(type solid)
 			)
 			(layer "F.CrtYd")
-			(uuid "6ab9c2d0-d4a9-4f3f-aed3-f18fadf3c48d")
+			(uuid "a2459117-aea2-4b98-83ec-da95ef8fad84")
 		)
 		(fp_line
-			(start -1.68 0.95)
-			(end -1.68 -0.95)
+			(start -1.2 1.2)
+			(end 3.2 1.2)
 			(stroke
 				(width 0.05)
 				(type solid)
 			)
 			(layer "F.CrtYd")
-			(uuid "ca25dc25-dfa1-422f-b646-ac649912cece")
+			(uuid "71de61a3-e0fb-4789-8dd0-2040fca464ea")
 		)
 		(fp_line
-			(start 1.68 -0.95)
-			(end 1.68 0.95)
+			(start 3.2 -1.2)
+			(end -1.2 -1.2)
 			(stroke
 				(width 0.05)
 				(type solid)
 			)
 			(layer "F.CrtYd")
-			(uuid "84f3cefe-6017-465e-939b-aa2763e62d7c")
+			(uuid "ac1549c6-d16b-4631-8b22-06ed0c800a79")
 		)
 		(fp_line
-			(start 1.68 0.95)
-			(end -1.68 0.95)
+			(start 3.2 -1.2)
+			(end 3.2 1.2)
 			(stroke
 				(width 0.05)
 				(type solid)
 			)
 			(layer "F.CrtYd")
-			(uuid "0c4e7ef6-e347-4a22-bbdc-43787c9255f3")
+			(uuid "4c4a0db9-c3fb-4712-8fa4-7211e4c623f3")
 		)
 		(fp_line
-			(start -1 -0.625)
-			(end 1 -0.625)
+			(start 2 0)
+			(end 0 0)
 			(stroke
-				(width 0.1)
+				(width 0.12)
 				(type solid)
 			)
 			(layer "F.Fab")
-			(uuid "d5e03384-b519-4ef5-94e3-ffa6db75e5da")
-		)
-		(fp_line
-			(start -1 0.625)
-			(end -1 -0.625)
-			(stroke
-				(width 0.1)
-				(type solid)
-			)
-			(layer "F.Fab")
-			(uuid "02682154-17d6-43fd-aa2f-7f899e2c5da7")
-		)
-		(fp_line
-			(start 1 -0.625)
-			(end 1 0.625)
-			(stroke
-				(width 0.1)
-				(type solid)
-			)
-			(layer "F.Fab")
-			(uuid "110c0ef7-b50d-4638-b83d-212744ccb1db")
-		)
-		(fp_line
-			(start 1 0.625)
-			(end -1 0.625)
-			(stroke
-				(width 0.1)
-				(type solid)
-			)
-			(layer "F.Fab")
-			(uuid "7c54903c-c6f1-4edc-b9da-51ec02a7f706")
+			(uuid "dd5bfd1d-a399-47c2-9df3-65e3bb0e2fda")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 0)
+			(at 1.1 1.7 0)
 			(layer "F.Fab")
-			(uuid "b31f2f0f-72a1-4fbd-8d26-c8ba90d21e26")
+			(uuid "71823653-84c4-4b3b-bf96-fcc74ad099f7")
 			(effects
 				(font
-					(size 0.5 0.5)
-					(thickness 0.08)
+					(size 1 1)
+					(thickness 0.15)
 				)
 			)
 		)
-		(pad "1" smd roundrect
-			(at -0.9125 0)
-			(size 1.025 1.4)
-			(layers "F.Cu" "F.Paste" "F.Mask")
-			(roundrect_rratio 0.243902)
+		(pad "1" thru_hole circle
+			(at 0 0)
+			(size 1.4 1.4)
+			(drill 0.7)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
 			(net 1 "unconnected-(R1-Pad1)")
 			(pintype "passive")
-			(uuid "651d3d3d-61e0-4021-af62-fa9bbe32996f")
+			(uuid "c4e0daa5-6ef8-479e-a614-69f6e046406d")
 		)
-		(pad "2" smd roundrect
-			(at 0.9125 0)
-			(size 1.025 1.4)
-			(layers "F.Cu" "F.Paste" "F.Mask")
-			(roundrect_rratio 0.243902)
-			(net 2 "unconnected-(R1-Pad2)")
+		(pad "1" thru_hole circle
+			(at 2 0)
+			(size 1.4 1.4)
+			(drill 0.7)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(net 1 "unconnected-(R1-Pad1)")
 			(pintype "passive")
-			(uuid "7b427daf-d15e-4898-bbf1-8c08f5a4008a")
+			(uuid "435153d5-a39e-4b85-b3bc-c64fbffb8cbe")
 		)
-		(model "${KICAD8_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0805_2012Metric.wrl"
+		(model "${KICAD8_3DMODEL_DIR}/TestPoint.3dshapes/TestPoint_Bridge_Pitch2.0mm_Drill0.7mm.wrl"
 			(offset
 				(xyz 0 0 0)
 			)
