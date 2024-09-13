@@ -1,0 +1,49 @@
+name: "KiBot Check & Generate"
+
+# Controls when the action will run.
+on:
+  push:
+    paths:
+      - '*.kicad_sch'
+      - '*.kicad_pcb'
+      - '*.kibot.yaml'
+      - '.github/workflows/kibot.yml'
+  pull_request:
+    paths:
+      - '*.kicad_sch'
+      - '*.kicad_pcb'
+      - '*.kibot.yaml'
+      - '.github/workflows/kibot.yml'
+  repository_dispatch:
+    types: [run_gha]
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  pcbs:
+    name: "pcbs"
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - uses: INTI-CMNB/KiBot@v2_k8
+      with:
+        dir: default
+        variant: left
+        skip: erc,drc
+
+    - uses: INTI-CMNB/KiBot@v2_k8
+      with:
+        dir: default
+        variant: right
+        skip: erc,drc
+
+    - name: upload results
+      uses: actions/upload-artifact@v4
+      with:
+        name: var_rename_results
+        path: default/
+ 
+
+
+
